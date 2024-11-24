@@ -1,4 +1,4 @@
-# Automated Testing with GitHub Copilot - lab setup
+# Testing with GitHub Copilot - lab setup
 
 These instructions will guide you through configuring a GitHub Codespaces environment that you can use to run the course labs. 
 If you prefer and if you know one of the other IDEs supported by Copilot, you can use that. But the instructions will reference the codespace version.
@@ -24,7 +24,7 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 
 Click on this button ⬇️
 <br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/skillrepos/copilot-testing?quickstart=1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/skillrepos/copilot-testing-workshop?quickstart=1)
 
 <br/><br/>
 Then click on the option to create a new codespace.
