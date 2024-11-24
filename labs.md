@@ -1,5 +1,5 @@
-# Automating Testing with GitHub Copilot
-## Revision 3.0 - 11/18/24
+# Testing with GitHub Copilot Workshop
+## Revision 1.0 - 11/24/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -142,149 +142,7 @@ Are there any other edge cases that should be tested?
 </p>
 </br></br>
 
-
-**Lab 3 - Using other Copilot features to help with testing**
-
-**Purpose: In this lab, we'll see how to leverage some of Copilot's other features to help with testing**
-
-1. Let's see how the Copilot Fix functionality can help us out. Click on/open the *test_prime.py* file from the earlier labs. At the top, let's change the first line from *import unittest* to *import pytest* as if we wanted to use the other framework.
-```
-import pytest
-```
-
-2. Since the rest of the file is expecting *unittest* as the framework, we have some problems now in the file. In fact, if you look at the **PROBLEMS** tab at the bottom of the codespace, you can see that it flags two instances in the file where *unittest* is undefined.
-
-![new problems](./images/new-problems-in-test_prime.png?raw=true "new problems")
-
-3. We know what the fix is, but let's see if Copilot can help identify and correct the issue for us. Select/highlight all the code
-   
-![copilot fix](./images/new-copilot-fix.png?raw=true "Copilot fix")
-
-4. Copilot should recognize that this is the wrong import and then suggest a correction/fix that you can then *Accept* from the dialog. After Accepting, you should see the set of problems for that file disappear from the PROBLEMS tab.
-
-![copilot fix](./images/new-copilot-fix-to-accept.png?raw=true "Copilot fix")
-
-
-5. Next, let's try out the Copilot */tests* shortcut command with a different kind of file and language. There's a large demo file of SQL statements in this project named [**create-tables.sql**](./create-tables.sql). Open that.
-
-```
-code create-tables.sql
-```
-![new file and chat](./images/new-open-create-tables-and-new-chat.png?raw=true "new file and chat")
-
-5. Since we already have our desired file selected, we can just run the */tests* command in the chat interface. 
-
-```
-/tests 
-```
-![testing for SQL](./images/new-run-tests-for-sql.png?raw=true "testing for sql")   
-
-6. After a few moments, Copilot should respond with a plan and suggested examples of how to do the steps. The interesting part is the plan and then the code that follows that.  You can just review these to see the example, you don't need to do anything with them.
-
-![testing suggestions for SQL](./images/new-generated-plan-to-test-sql.png?raw=true "testing suggestions for sql")   
-
-7. Suppose we need to better understand the code we're testing. We can have Copilot explain the code to us. Switch back to the *webscraper.py* file. Highlight all of the code in the file and then use the CMD/CTRL+I shortcut to bring up the chat dialog window and type in */explain*.
-
-![explain webscraper.py](./images/ct51.png?raw=true "explain webscraper.py")   
-
-8. This will dump a lot of output in the dialog. To better review it, click on the *View in Chat* button to put it in the main Chat interface.
-
-![view in chat](./images/new-view-in-chat.png?raw=true "view in chat")   
-
-9. While we're at it, let's have Copilot explain how the testing file it created for us works. Start a *new* chat. In the chat interface - enter *@workspace /explain #* and pause. There should then be a popup, where you can use the arrow key to arrow down and select the *#file* entry and hit Enter. 
-
-```
-@workspace /explain #
-```
-
-![selecting file](./images/ct54.png?raw=true "selecting file")
-
-10. After you selecting the *#file* selector, you should get a popup near the center top of the codespace interface. This will let you select the *test_webscraper.py* file. Select that file.
-
-![selecting file](./images/ct55.png?raw=true "selecting file")
-
-11. You'll then have a highlighted command to explain the file. Hit Enter for that. You may or may not then have another popup to select the range of the testing file to explain. But if you do, you can just select the *TestWebScraper* entry.
- 
- ![full entry](./images/ct57.png?raw=true "full entry")
- 
- ![full entry](./images/ct56.png?raw=true "full entry")  
-
-12. After executing this, you'll likely see lots of output, including example usage, code improvements, etc. But you can scan back up through the output to see the sections with explanations.
-
- ![explanation](./images/new-web-scraper-test-explanation.png?raw=true "explanation") 
-
-<p align="center">
-**[END OF LAB]**
-</p>
-</br></br>
-
-
-**Lab 4 - Documentation for Testing**
-
-**Purpose: In this lab, we'll see how to use Copilot to help document content for testing.**
-
-1. To have the testing code be able to be maintained, it should be documented well. We can have Copilot do this for us too. In the editor, switch to the *test_webscraper.py* file and highlight the code. Open the shortcut dialog with CTRL/CMD+I and enter the */doc* command in it. 
-
-```
-/doc
-```
-
-2. Hit Enter and you'll see some documentation suggested at the start of the file. You can just go ahead and accept that.
- 
- ![initial doc suggestion](./images/new-doc-test_webscraper.png?raw=true "initial doc suggestion")
-
-3. This is useful, but we'd like to have the test cases more thoroughly documented. With the code still highlighted, bring up the chat dialog again with the CTRL/CMD+I sequence and tell Copilot in the dialog to "verbosely comment all the code so it's easy to understand".
-
-```
-verbosely comment all the code so it's easy to understand
-```
-
-![verbose doc prompt](./images/new-verbosely-comment-code.png?raw=true "verbose doc prompt")
-
-4. Hit Enter and you should see more thorough comments suggested throughout the code body. You can go ahead and *Accept* them. (You may need to do multiple *Accepts*.)
-
-![verbose doc suggestions](./images/new-code-with-verbose-comments.png?raw=true "verbose doc suggestions")
-
-
-5. While we're working with documentation, sometimes it can be useful to have documentation on features like APIs to go off of. Let's have Copilot try to generate that for us. In the chat interface, you can just clear the current content and enter "Create API documentation for the APIs in #file:webscraper.py". After hitting Enter, you should see documentation for the APIs as requested.
-
-```
-/clear
-create API documentation for the APIs in #file:webscraper.py
-```
-
-![api doc](./images/new-api-docs.png?raw=true "api doc")
-
-
-6. Let's try one more doc step here. Let's have Copilot generate functional documentation to help us understand the code we're testing. Start a new chat. In the new chat interface, enter in the prompt "Create functional documentation for the #file:webscraper.py" and hit Enter. Copilot should then generate extensive documentation with the details of the file.
-
-```
-create functional documentation for the #file:webscraper.py
-```
-
-![functional doc](./images/new-functional-doc-output.png?raw=true "functional doc")
-
-
-7. Having this documentation generated in Copilot is useful, but to make it more widely sharable we need to be able to save it separately. Simply copying it from the Chat interface won't preserve any generated code. To ensure you get everything, it works best to click on the "..." menu in the upper right of the Chat section and select "Open Chat in Editor". Go ahead and do that now.
-
-![open chat in editor](./images/new-open-chat-in-editor.png?raw=true "open chat in editor")
-
-
-9. In the copy of the chat that is open in the editor now, you can right-click and select *Copy All*. This will copy all the content. 
-
-![copy markdown](./images/new-copy-chat-content-in-editor.png?raw=true "copy markdown")
-
-
-10. You can then paste this into a text file, save it as .md (markdown) format and then view it in a markdown viewer or convert it.
-
-![copy markdown](./images/ct69.png?raw=true "copy markdown")
-
-<p align="center">
-**[END OF LAB]**
-</p>
-</br></br>
-
-**Lab 5 - Validating Inputs**
+**Lab 3 - Validating Inputs**
 
 **Purpose: In this lab, we'll see how to have Copilot help validate inputs in functions.**
 
@@ -364,7 +222,7 @@ refactor the code in #file:webscraper.py to make it more easily testable
 </p>
 </br></br>
 
-**Lab 6 - Leveraging frameworks and TDD**
+**Lab 4 - Leveraging frameworks and TDD**
 
 **Purpose: In this lab, we'll see how to leverage Copilot with testing frameworks and how to do Test-Driven Development with it.**
 
