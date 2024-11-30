@@ -1,5 +1,5 @@
 # Testing with GitHub Copilot Workshop
-## Revision 1.0 - 11/24/24
+## Revision 1.1 - 11/29/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
