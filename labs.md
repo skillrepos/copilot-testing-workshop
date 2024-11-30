@@ -124,17 +124,17 @@ How can I measure code coverage on this file?
     
 ![insert command from chat to terminal](./images/new-command-from-chat-to-terminal.png?raw=true "insert command from chat to terminal")
 
-11. Finally, let's have Copilot help us identify any other edge cases that we should consider. Switch back to the *test-prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?".
+11. Finally, let's have Copilot help us identify any other edge cases that we should consider. Uncheck the "eye" icon. Switch back to the *test_prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?".
 
 ```
 Are there any other edge cases that should be tested?
 ```
 
-![finding other test cases](./images/new-edge-cases-to-apply.png?raw=true "Finding other test cases")
+![finding other test cases](./images/new2-edge-cases-to-apply.png?raw=true "Finding other test cases")
 
 12. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Apply in Editor* icon that shows up when you hover over the code and then clicking on the *Accept changes* link above the code change.
 
-![adding test cases](./images/new-apply-edge-cases.png?raw=true "Adding test cases")
+![adding test cases](./images/new2-apply-edge-cases.png?raw=true "Adding test cases")
 
     
 <p align="center">
