@@ -228,7 +228,7 @@ refactor the code in #file:webscraper.py to make it more easily testable
 
 **Important Note: If any steps in this lab run with /tests by default, run them again using the "run without" option**
 
-1. Let's look at a TDD approach of creating the test cases with a failing test and then immplementing the code to be tested. Consider a simple example where we want to create a test class and tests for students at a university. We'll use Mockito in our testing framework. Let's have Copilot create a pom.xml file for us with a mockito dependency. In the separate chat interface, enter the following prompt:
+1. Let's look at a TDD approach of creating the test cases with a failing test and then immplementing the code to be tested. Consider a simple example where we want to create a test class and tests for students at a university. We'll use Mockito in our testing framework. Let's have Copilot create a pom.xml file for us with a mockito dependency. In the separate chat interface, start a new chat session, and enter the following prompt:
 
 ```
 add a pom.xml file with a mockito dependency version 3.3.3, and compiler source and target version 1.8
