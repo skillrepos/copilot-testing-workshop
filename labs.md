@@ -181,24 +181,24 @@ generate checks inline with the is_prime function to ensure that the inputs to t
 What other kinds of test cases should we check for?
 ```
 
-7. Notice that in my example, only lines 11-28 were used as a reference - which corresponds to what was visible in the editor (aka #editor). With only a subset of the test cases visible, it's possible/likely that Copilot would repeat some that were already in the parts of the file that weren't visible in the editor.  With this prompt, Copilot will likely add some additional test cases like these.
+8. Notice that in my example, only lines 11-28 were used as a reference - which corresponds to what was visible in the editor (aka #editor). With only a subset of the test cases visible, it's possible/likely that Copilot would repeat some that were already in the parts of the file that weren't visible in the editor.  With this prompt, Copilot will likely add some additional test cases like these.
 
 ![only visible context](./images/new-only-editor-visible-context.png?raw=true "only visible context") 
    
-8. To make sure we get the entire file as context, we could use the *#file* selector. But we can also do it a different way. First, let's *cancel* the current context in the chat dialog by clicking on the icon that looks like an "eye" at the end of the *test-prime.py* item n the chat. (See below for where to click and what it should look like after.)
+9. To make sure we get the entire file as context, we could use the *#file* selector. But we can also do it a different way. First, let's *cancel* the current context in the chat dialog by clicking on the icon that looks like an "eye" at the end of the *test-prime.py* item n the chat. (See below for where to click and what it should look like after.)
    
 ![disable current file context](./images/new-disable-current-file-context.png?raw=true "disable current file context") 
 
 ![disabled current file context](./images/new-disabled-current-file-context.png?raw=true "disabled current file context") 
 
-9. Click on the *paper clip* icon and select the *test-prime.py* file from the dialog that pops up to add the entire file as context. Afterwards, the chat window should look like the second screenshot below.
+10. Click on the *paper clip* icon and select the *test-prime.py* file from the dialog that pops up to add the entire file as context. Afterwards, the chat window should look like the second screenshot below.
 
 ![attach file context](./images/new-attach-context.png?raw=true "attach file context") 
 
 ![attached file context](./images/new-attached-file-for-context.png?raw=true "attached file context") 
 
 
-10. Now, we can input the same prompt again and we should see that the entire file was used instead of just the visible portion. Input the same prompt and notice the output. Since the entire file was used as context, the new test cases should not overlap the existing ones. Afterwards, you can add the changes into the *test-prime.py* file if you want.
+11. Now, we can input the same prompt again and we should see that the entire file was used instead of just the visible portion. Input the same prompt and notice the output. Since the entire file was used as context, the new test cases should not overlap the existing ones. Afterwards, you can add the changes into the *test-prime.py* file if you want.
 
 ```
 What other kinds of test cases should we check for?
@@ -206,13 +206,13 @@ What other kinds of test cases should we check for?
 
 ![distinct test case context](./images/new-distinct-test-case-context.png?raw=true "distinct test case context") 
 
-11. Finally, let's see if Copilot can help refactor our code to make it more testable. We'll use the *webscraper.py* file for this since it is more substantial.  Enter the query below in the Chat interface. 
+12. Finally, let's see if Copilot can help refactor our code to make it more testable. We'll use the *webscraper.py* file for this since it is more substantial.  Enter the query below in the Chat interface. 
 
 ```
 refactor the code in #file:webscraper.py to make it more easily testable
 ```
 
-12. You should see some suggestions for improving testability in the file in the chat output. These can be applied to the current code if you want.
+13. You should see some suggestions for improving testability in the file in the chat output. These can be applied to the current code if you want.
     
 ![Refactoring for testing](./images/new-refactor-for-testability.png?raw=true "refactoring for testing")  
 
