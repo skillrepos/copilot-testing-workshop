@@ -185,7 +185,7 @@ What other kinds of test cases should we check for?
 
 ![only visible context](./images/new-only-editor-visible-context.png?raw=true "only visible context") 
    
-9. To make sure we get the entire file as context, we could use the *#file* selector. But we can also do it a different way. First, let's *cancel* the current context in the chat dialog by clicking on the icon that looks like an "eye" at the end of the *test-prime.py* item n the chat. (See below for where to click and what it should look like after.)
+9. To make sure we get the entire file as context, we can follow the same process as in the previous lab. First, let's *cancel* the current context in the chat dialog by clicking on the icon that looks like an "eye" at the end of the *test-prime.py* item n the chat. (See below for where to click and what it should look like after.)
    
 ![disable current file context](./images/new-disable-current-file-context.png?raw=true "disable current file context") 
 
