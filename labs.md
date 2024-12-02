@@ -1,5 +1,5 @@
 # Testing with GitHub Copilot Workshop
-## Revision 1.1 - 11/29/24
+## Revision 1.2 - 12/02/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -27,7 +27,7 @@ code prime.py
 
 ![using the shortcut command to gen tests](./images/new-slash-tests-command.png?raw=true "using the shortcut command to gen tests")
 
-5. After running the command, Copilot generates some basic assert-based tests in a new file. You can just save this file as *test_prime.py*. To do this, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save As* (or use the menu shortcut). Reply yes to the dialog asking about saving AI-generated results.
+5. After running the command, Copilot generates some basic assert-based tests in a new file. You can just save this file as *test_prime.py*. To do this, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save As* (or use the menu shortcut). (Make sure you are saving the testing file and not the prime.py file - it will probably have a temporary name of soemthing like "import_...".) Reply yes to the dialog asking about saving AI-generated results.
    
 ![proposed tests into new file](./images/new-slash-tests-output.png?raw=true "proposed tests into new file")
 ![saving file](./images/new-save-test_prime.png?raw=true "saving file")
@@ -98,7 +98,7 @@ How can I test #file:webscraper.py?
 
 ![save new file](./images/new-save-test_webscraper.png?raw=true "save new file")
 
-6. Let's also look at how we can add code coverage information for the *webscraper.py* file. Switch to the separate chat dialog. To keep things clean, let's start a new chat. Also, let's remove the default context in the chat. Click on the icon next to the test_webscraper.py file to delete it. 
+6. Let's also look at how we can add code coverage information for the *webscraper.py* file. Switch to the separate chat dialog. To keep things clean, let's start a new chat. Also, *if present* remove the default context in the chat. Click on the icon next to the test_webscraper.py file to delete it. (If not showing up to remove, you can click in the file and then it should show up.)
 
 ![start new chat](./images/new-new-chat.png?raw=true "start new chat")  
 ![delete default context](./images/new-delete-default-context.png?raw=true "delete default context")
@@ -124,7 +124,7 @@ How can I measure code coverage on this file?
     
 ![insert command from chat to terminal](./images/new-command-from-chat-to-terminal.png?raw=true "insert command from chat to terminal")
 
-11. Finally, let's have Copilot help us identify any other edge cases that we should consider. Uncheck the "eye" icon. Switch back to the *test_prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?".
+11. Finally, let's have Copilot help us identify any other edge cases that we should consider. Uncheck the "eye" icon. Switch back to the *test_prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?". (If the test_prime.py file shows up in the context window with a mark through it, you can unclick the *eye* icon to ensure it is used.)
 
 ```
 Are there any other edge cases that should be tested?
